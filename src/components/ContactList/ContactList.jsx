@@ -7,7 +7,7 @@ export const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getStatusFilter);
   const filteredContactsByName = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+   contact.name && contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
