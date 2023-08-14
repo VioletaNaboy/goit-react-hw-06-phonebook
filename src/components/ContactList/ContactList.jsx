@@ -6,6 +6,8 @@ import css from './ContactsList.module.css';
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getStatusFilter);
+  console.log(filter)
+  console.log(contacts)
   const filteredContactsByName = contacts.filter(contact =>
    contact.name && contact.name.toLowerCase().includes(filter.toLowerCase())
   );
